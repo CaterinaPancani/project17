@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <title>Document</title>
-</head>
-<body>
+<x-layout>
     Hello world
 <div class="container">
     <div class="row">
@@ -20,11 +11,22 @@
         </div>
 
         <div class="col-4 text-center">
-            <livewire:users.edit :user="$user" />
+            <livewire:users.edit  />
+            {{-- devo aggiungere nel tag riga sopra  :user="$user" per passargli la variabile $user della classe EDIT--}}
         </div>
     </div>
+    <div class="row">
+        <div class="col-4 text-center">
+            <livewire:users.edit/>
+        </div>
+
+        <div class="col-4 text-center">
+        </div>
+
+        <div class="col-4 text-center">
+        </div>
+    </div>
+
 </div>
 
-
-</body>
-</html>
+</x-layout>

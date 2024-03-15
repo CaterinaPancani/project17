@@ -14,9 +14,9 @@ class Edit extends Component
         $this->name=$this->user->name;
         $this->email=$this->user->email;
     }
-
     public function render()
     {
         return view('livewire.users.edit');
     }
+    
 }

@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function show(User $user){
-        return view('livewire.users.show', compact('user'));
+        return view('users.show', compact('user'));
     }
     public function edit(User $user){
-        return view('livewire.users.edit', compact('user'));
+        return view('users.edit', compact('user'));
     }
 }
