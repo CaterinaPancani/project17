@@ -16,7 +16,7 @@
               <td>{{$user->email}}</td>
               <td>
                 <a href="{{route('user.show',$user)}}">Show</a>
-                <a wire:click="delete({{$user->id}})" href="{{route('users.delete')}}">Show</a>
+                <a wire:click="delete({{$user->id}})">Delete</a>
 
               </td>
             </tr>                
