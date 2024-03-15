@@ -18,6 +18,5 @@ class Index extends Component
         //aggiungere controllo relazioni, se user ha creeato articoli
         $user->delete();
         session()->flash('success','user successfully deleted.');
-
     }
 }

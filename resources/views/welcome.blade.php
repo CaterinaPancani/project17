@@ -12,11 +12,15 @@
 <div class="container">
     <div class="row">
         <div class="col-4 text-center">
-<livewire:users.create/>
+            <livewire:users.create/>
         </div>
 
-        <div class="col-8 text-center">
-<livewire:users.index/>
+        <div class="col-4 text-center">
+            <livewire:users.index/>
+        </div>
+
+        <div class="col-4 text-center">
+            <livewire:users.edit :user="$user" />
         </div>
     </div>
 </div>
