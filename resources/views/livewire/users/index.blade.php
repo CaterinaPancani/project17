@@ -14,7 +14,9 @@
               <th scope="row">{{$user->id}}</th>
               <td>{{$user->name}}</td>
               <td>{{$user->email}}</td>
-              <td>Azioni</td>
+              <td>
+                <a href="{{route('user.show',$user)}}">Show</a>
+              </td>
             </tr>                
             @endforeach
         </tbody>
