@@ -16,7 +16,7 @@
         </div>
 
         <div class="col-8 text-center">
-e anche qui
+<livewire:users.index/>
         </div>
     </div>
 </div>
