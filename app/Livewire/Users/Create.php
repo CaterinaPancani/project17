@@ -15,10 +15,12 @@ class Create extends Component
         return view('livewire.users.create');
     }
     public function store(){
-        User::create([
-            'name'=>$this->name,
-            'email'=>$this->email,
-            'password'=>$this->password
-        ]);
+        // User::create([
+        //     'name'=>$this->name,
+        //     'email'=>$this->email,
+        //     'password'=>$this->password
+        // ]);
+
+        $this->name='';
     }
 }
