@@ -15,6 +15,13 @@ class Create extends Component
         return view('livewire.users.create');
     }
     public function store(){
+
+        $validatedData = $this->validate([
+            'name'=>'required',
+            'email'=>'required|email|unique:users',
+            'password'=>'required'
+        ]);
+
         User::create([
             'name'=>$this->name,
             'email'=>$this->email,
