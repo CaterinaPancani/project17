@@ -10,7 +10,7 @@ class Create extends Component
 {
     #[Validate('required')]
     public $name;
-    #[Validate('required')]
+    #[Validate('required|email|unique:users')]
     public $email;
     #[Validate('required')]
     public $password;
