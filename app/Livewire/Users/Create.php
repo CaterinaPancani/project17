@@ -4,24 +4,24 @@ namespace App\Livewire\Users;
 
 use App\Models\User;
 use Livewire\Component;
+use Livewire\Attributes\Validate;
 
 class Create extends Component
 {
+    #[Validate('required')]
     public $name;
+    #[Validate('required')]
     public $email;
+    #[Validate('required')]
     public $password;
+    
     public function render()
     {
         return view('livewire.users.create');
     }
     public function store(){
 
-        $validatedData = $this->validate([
-            'name'=>'required',
-            'email'=>'required|email|unique:users',
-            'password'=>'required'
-        ]);
-
+        $this->validate();
         User::create([
             'name'=>$this->name,
             'email'=>$this->email,
