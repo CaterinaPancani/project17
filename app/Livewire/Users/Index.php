@@ -11,7 +11,7 @@ class Index extends Component
     use WithPagination;
     public function render()
     {
-        $users=User::paginate(2);
+        $users=User::orderBy('updated_at','DESC')->paginate(2);
         return view('livewire.users.index',compact('users'));
     }
 }
