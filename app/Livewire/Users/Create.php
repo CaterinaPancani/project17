@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Users;
 
+use App\Models\User;
 use Livewire\Component;
 
 class Create extends Component
@@ -14,6 +15,10 @@ class Create extends Component
         return view('livewire.users.create');
     }
     public function store(){
-        
+        User::create([
+            'name'=>$this->name,
+            'email'=>$this->email,
+            'password'=>$this->password
+        ]);
     }
 }
